@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student form</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .width100{
+            width: 100%;
+        }
+        .imagewidth{
+            max-width: 50%;
+        }
+        .label{
+            min-width: 80px;
+        }
+        .studentform{
+            /* background-color: #a980f8; */
+            border: 1px solid #a777ef;
+        }
+        .resulttable{
+            margin: auto;
+            width: 80%;
+            margin-bottom: 20px;
+        }
+        .del{
+            background-color: red;
+            color: white;
+            padding: 8px;
+            border-radius: 8px;
+        }
+        tr{
+            margin: 10px;
+        }
+    </style>
+    </head>
+<body>
+   <div class="flex  items-center p-8 gap-3">
+    <div class="imagewidth hidden md:block">
+        <img src="./Wavy_Tech-28_Single-10.jpg" alt="image" >
+    </div>
+     <form onsubmit="saveform(event)" class="width100 studentform rounded-md p-2 py-4">
+        <h1 class="text-2xl bolder p-2 text-center">Student form</h1>
+    <div class="flex gap-4 p-4 justify-between items-center">
+        <div class="label">Name</div>
+        <input type="text" id="name" class="border border-black rounded-md width100 p-2" placeholder="Enter student name" required>
+    </div>
+    <div class="flex gap-4 p-4 justify-between items-center">
+        <div class="label">Age</div>
+        <input type="number" id="age" class="border border-black rounded-md p-2 width100" placeholder="Enter student Age" required>
+    </div>
+    <div class="flex justify-between gap-4 items-center">
+        <div class="p-4 label">Gender</div>
+        <div id="gender" class="flex gap-4 p-4 items-center width100">
+    <input type="radio" id="male" name="gender" value="apple" required>
+  <label for="apple">Male</label><br>
+
+  <input type="radio" id="female" name="gender" value="banana" required>
+  <label for="banana">Female</label><br></div>
+    </div>
+    <div class="flex gap-4 p-4 justify-between items-center">
+        <div class="label">Course</div>
+        
+            <select name="course" id="course" class="border border-black rounded-md width100 p-2" required>
+                <option value="Javascript">Javascript</option>
+                <option value="Html">Html</option>
+            </select>
+        
+    </div>
+    <div class="flex gap-4 p-4 justify-between items-center">
+        <div class="label">E-mail</div>
+        <input type="email" id="email" class="border border-black rounded-md width100 p-2" placeholder="Enter student MailId" required>
+    </div>
+    <button id="btn" class=" text-white p-2 rounded-md text-lg" style="width: 80%; margin: auto; display: block; background-color: #a777ef;" type="submit">Save</button>
+</form>
+
+    
+   </div>
+   <table id="datatable" class="border border-separate rounded-md p-2 resulttable text-center ">
+        <thead>
+            <th class="p-1">Name</th>
+            <th class="p-1">age</th>
+            <th class="p-1">Gender</th>
+            <th class="p-1">Course</th>
+            <th class="p-1">Email</th>
+            <th class="p-1">Action</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script src="./script.js"></script>
+    
+</body>
+</html>
