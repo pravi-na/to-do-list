@@ -6,11 +6,7 @@ var age = document.getElementById("age").value
 var gender = document.querySelector('input[name=gender]:checked').value;
 var course = document.getElementById("course").value;
 var email = document.getElementById("email").value
-// var cont = document.getElementById("container")  
-    // console.log(names.value,age.value,gender.value,course.value,email.value)
-    var x = document.createElement("li");
-    // x.textContent = names.value;
-    // cont.append(x)
+var x = document.createElement("li");
 
     var newtable = document.getElementById("datatable").getElementsByTagName("tbody")[0];
 var newrow = newtable.insertRow();
